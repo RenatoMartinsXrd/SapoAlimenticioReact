@@ -1,0 +1,57 @@
+.styleContainer,.containerTitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.containerTitle{
+  margin-top: 90px;
+  width: 90%;
+}
+
+.styleContainer h2,.styleContainer h1{
+    color: #47525E;
+    font-family: Lato;
+    font-size: calc(1em + 2vw);
+    line-height: 62px;
+    text-align: center;
+    max-width: 1020px;
+}
+
+.styleContainer h1 {
+  display: inline;
+  font-size: calc(1em + 0.5vw);
+  font-style: italic;
+  color: #5A6978
+}
+
+.containerScrollIcon{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.containerScrollIcon img{
+  height: 62px;
+  transform: rotate(90deg);
+  position: absolute;
+}
+
+.containerScrollIcon img:nth-child(2){
+margin-top:10px;
+}
+
+.containerScrollIcon img:nth-child(3) {
+  margin-top: 20px;
+}
+
+.containerScrollIcon h3{
+  margin-top: 60px;
+}
+
+.titleScroll{
+  color: #8492A6;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: left;
+}

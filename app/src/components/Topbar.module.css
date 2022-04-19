@@ -1,0 +1,43 @@
+header{
+    background-color: #8190A5;
+    width: 100%;
+    height: 98px;
+}
+header,.containerNav,.containerMenu,.containerHome{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerMenu li,.containerHome h2 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 62px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.containerNav{
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.containerMenu{
+  gap: 30px;
+  margin: 0;
+}
+
+.containerLogo{
+  display: flex;
+  width: 100px;
+  height: 100px;
+}
+
+.lineIcon{
+  width: 3px;
+  background-color: white;
+  height: 60px;
+  margin: auto 15px;
+}
