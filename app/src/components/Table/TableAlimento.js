@@ -1,15 +1,16 @@
 import React from 'react'
 import { AlimentosService } from '../../services/AlimentosService'
 import styles from './TableAlimento.module.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Table from './Table.js'
 const TableAlimento = () => {
   const [dataTable, setDataTable] = React.useState([])
   React.useEffect(() => {
-    AlimentosService.findAll().then((result) => {
-      setDataTable(result)
-    })
-  }, [dataTable])
+    async function fetchAlimentacao() {
+      const response = await AlimentosService.findAll()
+      setDataTable(response.data)
+    }
+    fetchAlimentacao()
+  }, [])
 
   const columns = [
     {
@@ -23,17 +24,17 @@ const TableAlimento = () => {
       sort: true
     },
     {
-      dataField: 'proteinas',
+      dataField: 'proteins',
       text: 'Proteinas',
       sort: true
     },
     {
-      dataField: 'carboidratos',
+      dataField: 'carbohydrates',
       text: 'Carboidratos',
       sort: true
     },
     {
-      dataField: 'gorduras',
+      dataField: 'fat',
       text: 'Gorduras',
       sort: true
     }

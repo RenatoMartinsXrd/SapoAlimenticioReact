@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 const data = [
   {
     id: '9d08c3d5-19260-5445-98b7-51fa4fcbadaa',
@@ -24,8 +26,15 @@ const data = [
     gorduras: 5
   }
 ]
+const http = axios.create({
+  baseURL: 'http://127.0.0.1:8000',
+  headers: {
+    'Content-type': 'application/json'
+  }
+})
+
 async function findAll() {
-  return data
+  return await http.get('/alimentacao')
 }
 
 const AlimentosService = {
