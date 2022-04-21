@@ -6,7 +6,7 @@
 }
 
 .containerTitle{
-  margin-top: 90px;
+  margin-top: calc(90px + 98px);
   width: 90%;
 }
 

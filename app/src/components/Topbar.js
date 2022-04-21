@@ -8,7 +8,6 @@ const Topbar = () => {
   const { setDataTable } = React.useContext(GlobalContext)
 
   const handleMax = (key) => {
-    console.log('OPA')
     function compare(a, b) {
       if (a[key] > b[key]) {
         return -1
@@ -20,19 +19,16 @@ const Topbar = () => {
     }
 
     AlimentosService.findAll().then((data) => {
-      console.log('JJKAKSAK')
       let table = data.sort(compare)
       let first = table[0]
       let result = []
       for (let alimento of table) {
-        console.log('IOAAOOAOAS')
         if (alimento[key] !== first[key]) {
           break
         }
         result.push(alimento)
         first = alimento
       }
-      console.log(result)
       setDataTable(result)
     })
   }
