@@ -11,6 +11,7 @@
 
 ### Clone este repositório
 git clone https://github.com/RenatoMartinsXrd/SapoAlimenticioReact
+cd app
 
 ### Execute localmente
 ```npm i```
