@@ -51,7 +51,14 @@ const Topbar = () => {
           </div>
 
           <div className={styles.lineIcon} />
-          <h2 onClick={handleAllAlimentos}>Home</h2>
+          <h2
+            onClick={() => {
+              handleAllAlimentos()
+              active.style.color = '#fff'
+            }}
+          >
+            Home
+          </h2>
         </div>
 
         <ul className={styles.containerMenu}>

@@ -46,7 +46,7 @@ const Table = ({
             justifyContent: 'center'
           }}
         >
-          <td
+          <tr
             style={{
               padding: '20px',
               width: '100%',
@@ -55,8 +55,8 @@ const Table = ({
               fontSize: '1em'
             }}
           >
-            A tabela não possui dados para mostrar
-          </td>
+            <td>A tabela não possui dados para mostrar</td>
+          </tr>
         </tbody>
       )}
     </table>
