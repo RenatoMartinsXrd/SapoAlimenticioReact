@@ -18,3 +18,7 @@ cd app
 ```npm i```
 
 ```npm start```
+
+### Algumas informações
+A service que faz request para o backend esta apontando para http://127.0.0.1:8000
+
