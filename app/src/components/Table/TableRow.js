@@ -7,12 +7,16 @@ const normalizeData = (columns, data) => {
   }
   return dataArray
 }
-const TableRow = ({ data, columns }) => {
+const TableRow = ({ data, columns, className }) => {
   const normalizedData = normalizeData(columns, data)
   return (
     <tr>
       {normalizedData.map((item, index) => {
-        return <td key={`td-${index}-${item}`}>{item}</td>
+        return (
+          <td key={`td-${index}-${item}`} className={className}>
+            {item}
+          </td>
+        )
       })}
     </tr>
   )

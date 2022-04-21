@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    flex-direction: column;
+}
+.container p{
+  font-size: 20px;
+}
+.containerFileUpload{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+input[type='file'] {
+  display: none;
+}
+.labelFile{
+      padding: 20px 10px;
+      width: 200px;
+      background-color: #333;
+      color: #FFF;
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+      margin-top: 10px;
+      cursor: pointer;
+}
+

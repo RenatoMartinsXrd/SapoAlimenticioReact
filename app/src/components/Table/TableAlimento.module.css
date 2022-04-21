@@ -1,9 +1,30 @@
 .containerTable{
   width: 80%;
   margin: 80px auto;
+  overflow-x: auto;
 }
 
-.customRowStyle{
-background-color: burlywood;
+.customTableStyle{
 width: 100%;
+background-color: #fff;
+border: none;
+border-spacing: 0;
+}
+
+.customTheadStyle{
+  background-color: #C0CCDA;
+    color: #47525E;
+    font-family: Lato;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.customHeadItemStyle{
+  padding: 20px;
+}
+.customRowItemStyle{
+  padding: 20px;
+  text-align: center;
 }

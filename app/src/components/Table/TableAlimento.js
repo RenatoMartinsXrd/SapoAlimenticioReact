@@ -2,15 +2,12 @@ import React from 'react'
 import { AlimentosService } from '../../services/AlimentosService'
 import styles from './TableAlimento.module.css'
 import Table from './Table.js'
+import { GlobalContext } from '../../contexts/GlobalContext'
 const TableAlimento = () => {
-  const [dataTable, setDataTable] = React.useState([])
+  const { dataTable, setDataTable } = React.useContext(GlobalContext)
   React.useEffect(() => {
-    async function fetchAlimentacao() {
-      const response = await AlimentosService.findAll()
-      setDataTable(response.data)
-    }
-    fetchAlimentacao()
-  }, [])
+    AlimentosService.findAll().then((result) => setDataTable(result || []))
+  }, [setDataTable])
 
   const columns = [
     {
@@ -42,13 +39,16 @@ const TableAlimento = () => {
 
   return (
     <div className={styles.containerTable}>
-      {dataTable.length > 0 && (
-        <Table
-          optionsClasses={{ tableStyle: styles.customRowStyle }}
-          theadData={columns}
-          tbodyData={dataTable}
-        />
-      )}
+      <Table
+        optionsClasses={{
+          tableStyle: styles.customTableStyle,
+          theadStyle: styles.customTheadStyle,
+          headItemStyle: styles.customHeadItemStyle,
+          rowItemStyle: styles.customRowItemStyle
+        }}
+        theadData={columns}
+        tbodyData={dataTable}
+      />
     </div>
   )
 }

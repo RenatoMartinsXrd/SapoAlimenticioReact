@@ -41,3 +41,7 @@ header,.containerNav,.containerMenu,.containerHome{
   height: 60px;
   margin: auto 15px;
 }
+
+.containerMenu li,header h2{
+  cursor: pointer;
+}
