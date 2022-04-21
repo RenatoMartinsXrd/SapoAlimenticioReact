@@ -6,7 +6,13 @@ import { GlobalContext } from '../contexts/GlobalContext'
 import { AlimentosService } from '../services/AlimentosService'
 const Topbar = () => {
   const { setDataTable } = React.useContext(GlobalContext)
+  const [active, setActive] = React.useState(null)
 
+  const handleStyleMenu = (target) => {
+    target.style.color = '#000'
+    if (active) active.style.color = '#fff'
+    setActive(target)
+  }
   const handleMax = (key) => {
     function compare(a, b) {
       if (a[key] > b[key]) {
@@ -49,9 +55,30 @@ const Topbar = () => {
         </div>
 
         <ul className={styles.containerMenu}>
-          <li onClick={() => handleMax('proteins')}>Proteínas</li>
-          <li onClick={() => handleMax('carbohydrates')}>Carboidratos</li>
-          <li onClick={() => handleMax('fat')}>Gorduras</li>
+          <li
+            onClick={(e) => {
+              handleMax('proteins')
+              handleStyleMenu(e.target)
+            }}
+          >
+            Proteínas
+          </li>
+          <li
+            onClick={(e) => {
+              handleMax('carbohydrates')
+              handleStyleMenu(e.target)
+            }}
+          >
+            Carboidratos
+          </li>
+          <li
+            onClick={(e) => {
+              handleMax('fat')
+              handleStyleMenu(e.target)
+            }}
+          >
+            Gorduras
+          </li>
         </ul>
       </nav>
     </header>

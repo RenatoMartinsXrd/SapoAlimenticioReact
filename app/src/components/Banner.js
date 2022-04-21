@@ -6,9 +6,9 @@ const Banner = () => {
     <section className={styles.styleContainer}>
       <div className={styles.containerTitle}>
         <h2>
-          Bem-vindo ao <h1 className={styles.title}>Sapo Alimentício</h1> , aqui
-          você irá encontrar informações nutricionais dos principais alimentos
-          do mercado.
+          Bem-vindo ao <span className={styles.title}>Sapo Alimentício</span> ,
+          aqui você irá encontrar informações nutricionais dos principais
+          alimentos do mercado.
         </h2>
       </div>
 
